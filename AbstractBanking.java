@@ -1,5 +1,104 @@
 import java.util.ArrayList;
 import java.time.LocalDate;
+
+/*
+Advanced Banking System with Abstraction
+Design and implement a modular banking system in Java using the concept of abstraction.
+
+Your task is to create a flexible system that supports multiple types of bank accounts, each with different rules for transactions, interest calculation, and withdrawal limits.
+
+Requirements
+
+1. Abstract Class
+
+Create an abstract class BankAccount that:
+
+Contains:
+
+accountNumber (String)
+
+accountHolderName (String)
+
+balance (double)
+
+Provides:
+
+A constructor to initialize all fields
+
+A concrete method deposit(double amount)
+
+A concrete method displayAccountInfo()
+
+Declares the following abstract methods:
+
+withdraw(double amount)
+
+calculateInterest()
+
+2. Concrete Classes
+
+Implement the following subclasses:
+
+SavingsAccount
+
+Interest rate: 4%
+
+Withdrawal limit: Cannot withdraw more than 3 times per session
+
+Must implement all abstract methods
+
+CurrentAccount
+
+No interest
+
+Allows overdraft up to 5000
+
+Must override withdrawal logic accordingly
+
+FixedDepositAccount
+
+No withdrawals allowed before maturity
+
+Interest rate: 7%
+
+Add an additional field: maturityPeriod (in years)
+
+3. Additional Requirements
+
+Use runtime polymorphism to manage different account types
+
+Store multiple accounts in a collection (e.g., ArrayList<BankAccount>)
+
+Perform operations like:
+
+Deposit
+
+Withdraw
+
+Interest calculation
+
+4. Constraints
+
+Prevent invalid operations (e.g., negative deposit, excessive withdrawal)
+
+Ensure proper encapsulation
+
+Follow clean code practices
+
+Expected Output (Example)
+
+Account: Ali - Savings
+Deposit: 5000
+Withdraw: 1000
+Interest: 160
+
+Account: Sara - Current
+Withdraw: 7000 (Overdraft Used)
+
+Account: Ahmed - Fixed Deposit
+Withdrawal not allowed before maturity
+Interest: 3500
+ */
 public abstract class BankAccount {
 
     private String accountNumber;
